@@ -8,7 +8,7 @@ const PopupWithForm = lazy(() => import('shared_ui/PopupWithForm').catch(() => {
 })
 );
 
-function EditProfilePopup({ isOpen }) {
+function EditProfilePopup({ isOpen, onClose }) {
   const [name, setName] = React.useState('');
   const [description, setDescription] = React.useState('');
 
@@ -47,7 +47,7 @@ function EditProfilePopup({ isOpen }) {
   return (
     <Suspense fallback="">
       <PopupWithForm
-        isOpen={isOpen} onSubmit={handleSubmit} title="Редактировать профиль" name="edit"
+        isOpen={isOpen} onSubmit={handleSubmit} onClose={onClose} title="Редактировать профиль" name="edit"
       >
         <label className="popup__label">
           <input type="text" name="userName" id="owner-name"

@@ -8,7 +8,7 @@ const PopupWithForm = lazy(() => import('shared_ui/PopupWithForm').catch(() => {
 );
 
 
-function EditAvatarPopup({ isOpen }) {
+function EditAvatarPopup({ isOpen, onClose }) {
 
   const inputRef = React.useRef();
 
@@ -30,7 +30,7 @@ function EditAvatarPopup({ isOpen }) {
   return (
     <Suspense fallback>
       <PopupWithForm
-        isOpen={isOpen} onSubmit={handleSubmit}  title="Обновить аватар" name="edit-avatar"
+        isOpen={isOpen} onSubmit={handleSubmit} onClose={onClose}  title="Обновить аватар" name="edit-avatar"
       >
 
         <label className="popup__label">

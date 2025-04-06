@@ -64,9 +64,11 @@ function Profile() {
               <button className="profile__add-button" type="button" onClick={CallAddCard}></button>
           </section>
             <EditAvatarPopup
+                onClose={closeAllPopups}
                 isOpen={isEditAvatarPopupOpen}
             />
             <EditProfilePopup
+                onClose={closeAllPopups}
                 isOpen={isEditProfilePopupOpen}
                 currentUser={currentUser}
             />
