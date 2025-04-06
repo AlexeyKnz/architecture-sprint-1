@@ -1,0 +1,56 @@
+
+{
+    "name": "web_canonicals_ru",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@testing-library/jest-dom": "^5.11.4",
+      "@testing-library/react": "^11.1.0",
+      "@testing-library/user-event": "^12.1.10",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-router-dom": "^5.2.0",
+      "react-scripts": "4.0.3",
+      "web-vitals": "^1.0.1"
+    },
+    "scripts":
+    {
+        "start": "npm-run-all --parallel start:*",
+        "start:shared": "cd shared/shared-ui && npm start",
+        "start:authentication": "cd authentication && npm start",
+        "start:userprofile": "cd userprofile && npm start",
+        "start:cards": "cd cards && npm start",
+        "start:host": "cd host && npm start",
+        "build": "npm-run-all build:host build:mf*",
+        "build:host": "cd host && npm run build",
+        "build:shared": "cd shared/shared-ui && npm run build",
+        "build:authentication": "cd authentication && npm run build",
+        "build:userprofile": "cd userprofile && npm run build",
+        "build:cards": "cd cards && npm run build"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@playwright/test": "^1.45.0",
+      "@types/node": "^20.14.9",
+      "dotenv": "^16.0.2",
+      "wait-port": "^1.1.0",
+      "npm-run-all": "^4.1.5"
+    }
+  }
