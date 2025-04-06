@@ -176,6 +176,11 @@ userprofile/ npm start
 cards/ npm start
 host/ npm start
 
+Добавил вариант запуска из microfronteds/
+cd /microfromteds
+npm install
+npm run start
+
 ## Задание 2
 
 Ссылка на диаграмму (https://drive.google.com/file/d/1k-b4Ri39Hdqv62RKkp_dCI5vrhqcwNuP/view?usp=sharing)
